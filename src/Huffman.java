@@ -14,7 +14,8 @@ public class Huffman
 		int size = 0;
 
 		// Read in file sample.txt and pass to the getText() function to convert to a string
-		File theFile = new File("C:\\Users\\Richard\\Documents\\Java Stuff\\Huffman Compression\\src\\sample.txt");
+		// Change this code to a different textfile name to compress a different textfile
+		File theFile = new File(".\\sample.txt");
 		String theText = GetText(theFile);
 		int Length = theText.length();
 
@@ -50,14 +51,16 @@ public class Huffman
 
 		// Encode the original text to its binary equivalent
 		String EncodedInput = HuffmanTree.EncodeText( theText, CharacterArray, size );
-		System.out.println("\n\n" + "Encoded input:" + EncodedInput + "\n\n	Length of encoded text: " + EncodedInput.length());
-		//System.out.println("\n\n	Length of encoded text: " + EncodedInput.length());
+		
+		Output.encodeToFile(EncodedInput);
 
 		// Decode the encoded text
 		String DecodedInput = HuffmanTree.DecodeText( EncodedInput, CharacterArray, Head );
 		Output.decodeToFile(DecodedInput);
-		System.out.println("\n\n" + DecodedInput + "\n\n	Length of decoded text: " + DecodedInput.length());
-		//System.out.println("\n\n	Length of decoded text: " + DecodedInput.length());
+		//System.out.println("\n\n" + DecodedInput);
+		System.out.println("\nThe encoded text has been outputted to a file called encode.txt");
+		System.out.println("The decoded text has been outputted to a file called decode.txt");
+		System.out.println("The table showing the frequencies has been outputted to a file called table.txt");
 
 		// exit program
 		System.exit(0);
