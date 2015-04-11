@@ -82,7 +82,7 @@ public class HuffmanTree {
 		//                     in reverse back to the parent.  The binary encoding is
 		//		           build in reverse.
 		//----------------------------------------------------------------------------
-		public static String BackwardsTraverse( HuffmanNode Node )
+		private static String BackwardsTraverse( HuffmanNode Node )
 		{
 			String Code = new String("");
 			while(Node.Parent != null)

@@ -15,7 +15,7 @@ public class Huffman
 
 		// Read in file sample.txt and pass to the getText() function to convert to a string
 		// Change this code to a different textfile name to compress a different textfile
-		File theFile = new File(".\\sample.txt");
+		File theFile = new File("sample.txt");
 		String theText = GetText(theFile);
 		int Length = theText.length();
 
