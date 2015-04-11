@@ -10,8 +10,7 @@ public class Quicksort {
 		
 		//divide 2 list
 		while (i <= j){
-			//System.out.println("array: " + theArray[i].getFrequency());
-			//System.out.println("pivot: " + pivot.getFrequency());
+			
 			while(theArray[i].getFrequency() < pivot.getFrequency()){
 				i++;
 			}
@@ -42,8 +41,7 @@ public class Quicksort {
 	}
 	
 	//-----------------------------------------------------------------------------
-	// SortArray - Takes the HuffmanNode array and its size as inputs.  Uses Bubble
-	//             Sort to arrange the characters in decreasing order.
+	// SortArray - Takes the HuffmanNode array and its size as inputs.
 	//-----------------------------------------------------------------------------
 	public static void SortArray( HuffmanNode theArray[], int Size )
 	{
