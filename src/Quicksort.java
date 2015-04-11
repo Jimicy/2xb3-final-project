@@ -2,8 +2,7 @@
 public class Quicksort {
 	
 	//-----------------------------------------------------------------------------
-	// SortArray - Takes the HuffmanNode array and its size as inputs.  Uses Bubble
-	//             Sort to arrange the characters in decreasing order.
+	// SortArray - Takes the HuffmanNode array and its size as inputs.
 	//-----------------------------------------------------------------------------
 	public static void SortArray( HuffmanNode theArray[], int Size )
 	{
