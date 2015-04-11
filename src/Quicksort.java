@@ -1,45 +1,5 @@
 
 public class Quicksort {
-	public static void Sort(HuffmanNode theArray[], int low, int high){
-		int i = low;
-		int j = high;
-		int middle = low+(high-low)/2;
-		//Get pivot which is the middle element of the list
-		HuffmanNode pivot = theArray[middle];
-
-		
-		//divide 2 list
-		while (i <= j){
-			//System.out.println("array: " + theArray[i].getFrequency());
-			//System.out.println("pivot: " + pivot.getFrequency());
-			while(theArray[i].getFrequency() < pivot.getFrequency()){
-				i++;
-			}
-			
-			while(theArray[j].getFrequency() > pivot.getFrequency()){
-				j--;
-			}
-		
-			if ( i <= j ){
-				exchange(theArray,i,j);
-				i++;
-				j--;
-			}
-		}
-	
-		if(low < j){
-			Sort(theArray,low,j);
-		}
-		if(i < high){
-			Sort(theArray,i,high);
-		}
-	}
-	
-	private static void exchange(HuffmanNode theArray[],int i, int j){
-		HuffmanNode temp = theArray[i];
-		theArray[i] = theArray[j];
-		theArray[j] = temp;
-	}
 	
 	//-----------------------------------------------------------------------------
 	// SortArray - Takes the HuffmanNode array and its size as inputs.  Uses Bubble
